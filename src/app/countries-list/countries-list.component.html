@@ -26,9 +26,9 @@
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12 mb-5" *ngFor='let key of objectKeys(countries)'>
           <a [routerLink]= "['/country', countries[key]['All']['country']]" class="card w-95 text-decoration-none text-dark">
-            <img class="card-img-top" src="https://flagcdn.com/256x192/{{countries[key]['All']['abbreviation'] | lowercase }}.png" alt="Card image cap">
+            <img *ngIf="countries[key]['All']['abbreviation'] != undefined" class="card-img-top" src="https://flagcdn.com/256x192/{{countries[key]['All']['abbreviation'] | lowercase }}.png" alt="Card image cap">
             <div class="card-body overflow-auto">
-              <h5 class="card-title">{{ countries[key]['All']['country'] }}</h5>
+              <h5 *ngIf="countries[key]['All']['country'] != undefined" class="card-title">{{ countries[key]['All']['country'] }}</h5>
               <p class="card-text"> <b>Location:</b> {{ countries[key]['All']['location'] }}</p>
               <p class="card-text"> <b>Population:</b> {{ countries[key]['All']['population'] }}</p>
               <p class="card-text"> <b>Country Code:</b> {{ countries[key]['All']['abbreviation'] }}</p>
