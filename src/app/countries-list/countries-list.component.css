@@ -1,0 +1,21 @@
+.color-red {
+  color: red;
+}
+
+.mt-9 {
+  margin-top: 82px;
+}
+
+.mb-150 {
+  margin-bottom: 150px;
+}
+
+.w-95 {
+  width: 95%;
+  height: 388px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b1/Mapa_mundi_blanco.PNG");
+}
